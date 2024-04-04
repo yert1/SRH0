@@ -7,6 +7,5 @@ lightfm
 pyrebase4
 pyrebase
 firebase_admin
-bson
 pymongo
 streamlit_option_menu
