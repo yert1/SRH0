@@ -1,0 +1,14 @@
+Method_ID,Method_Name,Effectiveness,Allergy_Latex,Allergy_Spermicide,Allergy_Copper,Allergy_Adhesive,Method_Type_Barrier,Method_Type_Emergency,Method_Type_Hormonal,Method_Type_Reversible,Period_Use_Long term,Period_Use_Short term,"Health_Conditions_Blood Clots, Hypertension, Migraines,Obesity, Breast Cancer, Liver Disease, Heart Disease","Health_Conditions_Blood Clots, Migraines, Hypertension, Breast Cancer, Diabetese, Obesity","Health_Conditions_Blood Clots, Stroke, Migraines, Diabetese, Breast Cancer, Liver Disease, Heart Disease","Health_Conditions_Breast Cancer, Liver Disease, Heart Disease",Health_Conditions_Endometriosis,"Health_Conditions_Liver Disease, Breast Cancer, Obesity",Health_Conditions_None,Health_Conditions_STI
+1,Pills,0.5741626794258368,0,0,0,0,0,0,1,0,0,1,False,False,True,False,False,False,False,False
+2,Condoms,0.0,1,0,0,0,1,0,0,0,0,1,False,False,False,False,False,False,True,False
+3,LNG IUD,1.0,0,0,0,0,0,0,0,1,1,0,False,False,False,False,True,False,False,False
+4,Copper IUD,0.9712918660287073,0,0,1,0,0,0,0,1,1,0,False,False,False,False,True,False,False,False
+5,Implant,0.9569377990430619,0,0,0,0,0,0,1,0,1,0,False,False,False,False,False,True,False,False
+6,Injection,0.7177033492822966,0,0,0,0,0,0,1,0,1,0,False,False,False,True,False,False,False,False
+7,Progestin Pill,0.5741626794258368,0,0,0,0,0,0,1,0,0,1,True,False,False,False,False,False,False,False
+8,Patch,0.5741626794258368,0,0,0,1,0,0,1,0,0,1,False,True,False,False,False,False,False,False
+9,Ring,0.4306220095693778,0,0,0,0,0,0,1,0,1,0,False,True,False,False,False,False,False,False
+10,Diaphragm,0.23923444976076524,0,0,0,0,1,0,0,0,0,1,False,False,False,False,False,False,False,True
+11,Sponge,0.2870813397129188,0,1,0,0,1,0,0,0,0,1,False,False,False,False,False,False,False,True
+12,Spermicides,0.23923444976076524,0,1,0,0,1,0,0,0,0,1,False,False,False,False,False,False,True,False
+13,Emergency Contraception Pills,0.4784688995215305,0,0,0,0,0,1,0,0,0,1,False,False,False,False,False,False,True,False
