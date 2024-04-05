@@ -24,7 +24,7 @@ def app():
         st.title ("Recommendation Tool")
         st.write('you are logged in as  '+st.session_state.user_handle)
         # Load your pre-trained LightFM model
-        Lightfm_model = pickle.load(open('Lightfm_model.sav', 'rb'))
+        Lightfm_model = pickle.load(open('ST/Lightfm_model.sav', 'rb'))
 
         # Load interactions and contraception methods data (replace with your data loading code)
         csv_files = glob.glob('*.csv')
