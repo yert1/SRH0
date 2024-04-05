@@ -1,4 +1,5 @@
 import streamlit as st
+from pickle5 import pickle
 import numpy as np
 import pandas as pd
 from scipy.sparse import csr_matrix
@@ -18,7 +19,7 @@ def app():
         st.title ("Recommendation Tool")
         st.write('you are logged in as  '+st.session_state.user_handle)
         # Load your pre-trained LightFM model
-        model = joblib.load('ST/model.joblib')
+        Lightfm_model = pickle.load(open('Lightfm_model.sav', 'rb'))
 
         # Load interactions and contraception methods data (replace with your data loading code)
         user_data = pd.read_csv('user_data.csv')
@@ -102,7 +103,7 @@ def app():
                                                     )
 
             # Generate recommendations for the new user
-            scores_new_user = model.predict(user_ids=0, item_ids=np.arange(interactions.shape[1]), user_features=new_user)
+            scores_new_user = Lightfm_model.predict(user_ids=0, item_ids=np.arange(interactions.shape[1]), user_features=new_user)
             top_items_new_user = contraception_methods.iloc[np.argsort(-scores_new_user)]
 
             # Filter out methods conflicting with health conditions, allergies, and STI history
