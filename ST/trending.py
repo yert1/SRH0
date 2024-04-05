@@ -6,12 +6,10 @@ from lightfm import LightFM
 from lightfm.data import Dataset
 import streamlit as st
 import streamlit.components.v1 as components
-import os
 import joblib
 
 # Set the file permissions for the model.joblib file
-file_path = 'model.joblib'
-os.chmod(file_path, 0o775)
+
 
 
 def app():
