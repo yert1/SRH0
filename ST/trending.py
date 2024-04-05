@@ -8,6 +8,11 @@ from lightfm.data import Dataset
 import streamlit as st
 import streamlit.components.v1 as components
 import joblib
+import pandas as pd
+import glob
+
+# Find and read all CSV files in the current directory
+
 
 # Set the file permissions for the model.joblib file
 
@@ -19,12 +24,15 @@ def app():
         st.title ("Recommendation Tool")
         st.write('you are logged in as  '+st.session_state.user_handle)
         # Load your pre-trained LightFM model
-        Lightfm_model = pickle.load(open('ST/Lightfm_model.sav', 'rb'))
+        Lightfm_model = pickle.load(open('Lightfm_model.sav', 'rb'))
 
         # Load interactions and contraception methods data (replace with your data loading code)
-        user_data = pd.read_csv('user_data.csv')
-        contraception_methods = pd.read_csv('ST/contraception_methods.csv')  # Replace with your data file
-        ratings_data = pd.read_csv('ratings_data.csv')
+        csv_files = glob.glob('*.csv')
+
+        # Read each CSV file into a separate dataframe
+        user_data = pd.read_csv(csv_files[0])
+        contraception_methods = pd.read_csv(csv_files[1])
+        ratings_data = pd.read_csv(csv_files[2])
 
         # Define user features column names (replace with your actual column names)
         user_features_col = ['Number_of_Pregnancies', 'STI_History', 'Allergy_Latex', 'Allergy_Spermicide', 'Allergy_Copper', 'Allergy_Adhesive',
