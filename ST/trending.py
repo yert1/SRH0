@@ -1,5 +1,4 @@
 import streamlit as st
-from joblib import load
 import numpy as np
 import pandas as pd
 from scipy.sparse import csr_matrix
@@ -7,6 +6,12 @@ from lightfm import LightFM
 from lightfm.data import Dataset
 import streamlit as st
 import streamlit.components.v1 as components
+import os
+import joblib
+
+# Set the file permissions for the model.joblib file
+file_path = 'model.joblib'
+os.chmod(file_path, 0o775)
 
 
 def app():
@@ -15,8 +20,7 @@ def app():
         st.title ("Recommendation Tool")
         st.write('you are logged in as  '+st.session_state.user_handle)
         # Load your pre-trained LightFM model
-        with open('model.joblib', 'rb') as f:
-            model = load(f)
+        model = joblib.load('model.joblib')
 
         # Load interactions and contraception methods data (replace with your data loading code)
         user_data = pd.read_csv('user_data.csv')
