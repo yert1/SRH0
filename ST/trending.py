@@ -9,7 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import joblib
 import pandas as pd
-import glob
+
 
 # Find and read all CSV files in the current directory
 
@@ -26,13 +26,10 @@ def app():
         # Load your pre-trained LightFM model
         Lightfm_model = pickle.load(open('ST/Lightfm_model.sav', 'rb'))
 
-        # Load interactions and contraception methods data (replace with your data loading code)
-        csv_files = glob.glob('*.csv')
-
-        # Read each CSV file into a separate dataframe
-        user_data = pd.read_csv(csv_files[0])
-        contraception_methods = pd.read_csv(csv_files[1])
-        ratings_data = pd.read_csv(csv_files[2])
+        
+        user_data = pd.read_csv('user_data.csv')
+        contraception_methods = pd.read_csv('contraception_methods.csv')  
+        ratings_data = pd.read_csv('ratings_data.csv')
 
         # Define user features column names (replace with your actual column names)
         user_features_col = ['Number_of_Pregnancies', 'STI_History', 'Allergy_Latex', 'Allergy_Spermicide', 'Allergy_Copper', 'Allergy_Adhesive',
