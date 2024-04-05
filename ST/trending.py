@@ -28,7 +28,7 @@ def app():
 
         
         user_data = pd.read_csv('ST/user_data.csv')
-        contraception_methods = pd.read_csv('contraception_methods.csv')  
+        contraception_methods = pd.read_csv('ST/contraception_methods.csv')  
         ratings_data = pd.read_csv('ratings_data.csv')
 
         # Define user features column names (replace with your actual column names)
