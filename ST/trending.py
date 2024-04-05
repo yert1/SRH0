@@ -27,7 +27,7 @@ def app():
         Lightfm_model = pickle.load(open('ST/Lightfm_model.sav', 'rb'))
 
         
-        user_data = pd.read_csv('user_data.csv')
+        user_data = pd.read_csv('ST/user_data.csv')
         contraception_methods = pd.read_csv('contraception_methods.csv')  
         ratings_data = pd.read_csv('ratings_data.csv')
 
