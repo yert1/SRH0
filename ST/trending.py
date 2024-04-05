@@ -18,7 +18,7 @@ def app():
         st.title ("Recommendation Tool")
         st.write('you are logged in as  '+st.session_state.user_handle)
         # Load your pre-trained LightFM model
-        model = joblib.load('model.joblib')
+        model = joblib.load('/home/treyish/project/ST/model.joblib')
 
         # Load interactions and contraception methods data (replace with your data loading code)
         user_data = pd.read_csv('user_data.csv')
