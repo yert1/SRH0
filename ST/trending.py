@@ -23,7 +23,7 @@ def app():
 
         # Load interactions and contraception methods data (replace with your data loading code)
         user_data = pd.read_csv('user_data.csv')
-        contraception_methods = pd.read_csv('contraception_methods.csv')  # Replace with your data file
+        contraception_methods = pd.read_csv('ST/contraception_methods.csv')  # Replace with your data file
         ratings_data = pd.read_csv('ratings_data.csv')
 
         # Define user features column names (replace with your actual column names)
